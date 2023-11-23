@@ -2,6 +2,33 @@
     font-family: 'lato';
     src: url(fonts/fonte\ lato/Lato-Regular.ttf);
 }
+:root {
+    --color-dark: rgb(14, 14, 14);
+    --color-white: #fff;
+}
 body {
     font-family: lato;
+    background-color: var(--color-dark);
+    color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+.content-add-item {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    flex-wrap: wrap;
+}
+#input-new-task, 
+#btn-new-task {
+    border: none;
+    font-size: 1rem;
+    
 }
