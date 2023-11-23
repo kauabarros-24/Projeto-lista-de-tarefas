@@ -2,10 +2,15 @@
     font-family: 'lato';
     src: url(fonts/fonte\ lato/Lato-Regular.ttf);
 }
+
 :root {
     --color-dark: rgb(14, 14, 14);
+    --color-dark2: rgb(32, 32, 32);
+    --color-dark3: rgb(22, 22, 22);
     --color-white: #fff;
+
 }
+
 body {
     font-family: lato;
     background-color: var(--color-dark);
@@ -15,20 +20,59 @@ body {
     align-items: center;
     gap: 4rem;
 }
+
 .content {
     display: flex;
     flex-direction: column;
     gap: 4rem;
 }
+
 .content-add-item {
     display: flex;
     align-items: center;
     gap: 4rem;
     flex-wrap: wrap;
 }
-#input-new-task, 
+
+#input-new-task,
 #btn-new-task {
     border: none;
     font-size: 1rem;
-    
+    outline: none;
+    padding: 1rem;
+
+}
+
+#input-new-task {
+    width: 20rem;
+    border-radius: 1rem;
+}
+
+#btn-new-task {
+    background-color: var(--color-dark2);
+    color: var(--color-white);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+#btn-new-task:hover {
+    background-color: var(--color-dark3);
+}
+
+#to-do-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+    font-size: 1.4rem;
+    text-transform: capitalize;
+    display: flex;
+    justify-content: space-between;
 }
