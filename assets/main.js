@@ -20,7 +20,7 @@ function showValues() {
     let list = document.getElementById('to-do-list');
     list.innerHTML = '';
     for (let i = 1; i <= values.length; i++) {
-        list.innerHTML += `<li>${values[i]['name']}</li>`;
+        list.innerHTML += `<li>${values[values[i]]['name']}</li>`;
     }
     
 }
