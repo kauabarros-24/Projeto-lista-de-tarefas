@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To Do list</title>
     <link rel="stylesheet" href="estilo.css">
+    <script src="main.js"></script>
 </head>
 
 <body>
@@ -14,12 +15,11 @@
         <div class="content-add-item">
             <!--Input botão-->
             <input type="text" id="input-new-task" placeholder="Digite a sua nova task">
-            <button id="btn-new-task" title="Clique aqui para adicionar uma nova task">+</button>
+            <button onclick="newTask()" id="btn-new-task" title="Clique aqui para adicionar uma nova task">+</button>
         </div>
         <div class="contente-body">
             <!--Lista-->
             <ol id="do-do-list">
-                <li>teste <button>bot</button> </li>
             </ol>
         </div>
     </div>
