@@ -1,14 +1,28 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To Do list</title>
     <link rel="stylesheet" href="estilo.css">
 </head>
+
 <body>
     <h1>To Do List</h1>
+    <div class="content">
+        <div class="content-add-item">
+            <!--Input botão-->
+            <input type="text" id="input-new-task" placeholder="Digite a sua nova task">
+            <button id="btn-new-task">+</button>
+        </div>
+        <div class="contente-body">
+            <!--Lista-->
+            <ul id="do-do-list"></ul>
+        </div>
+    </div>
 
-<script src="main.js"></script>
+    <script src="main.js"></script>
 </body>
+
 </html>
