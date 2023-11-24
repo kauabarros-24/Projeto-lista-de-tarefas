@@ -1,6 +1,6 @@
 @font-face {
-    font-family: 'Lato';
-    src: url(./Lato-Regular.ttf) format(woff2);
+    font-family: 'lato';
+    src: url(fonts/fonte\ lato/Lato-Regular.ttf);
 }
 :root{
     --color-dark: rgb(14, 14, 14);
@@ -12,7 +12,7 @@
 }
 
 body{
-    font-family: 'Lato';
+    font-family: lato;
     background-color: var(--color-dark);
     color: var(--color-white);
     display: flex;
