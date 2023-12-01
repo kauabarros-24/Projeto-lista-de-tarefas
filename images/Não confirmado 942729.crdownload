@@ -1,0 +1,22 @@
+#Processamento
+print("Nesse programa é aplicado a crifra de César aos números, criptografando-os")
+augusto = int(input("Digite um valor com três dígitos: "))
+continha = 0
+
+while continha == 0:
+    A1  =  augusto / 100
+    A2  = int(A1)
+    A3 = A1 - A2
+    A4 = A3 * 10
+    A5 = int(A4)
+    A6 = A4 - A5
+    A7 = A6 * 10
+    A8 = round(A7)
+    #Nesse parte separamos os três inteiros dado pelo usuário
+    cifra1 = A2 + 3
+    cifra2 = A5 + 3
+    cifra3 = A8 + 3
+    maximus = str(cifra1), str(cifra2), str(cifra3)
+    print(maximus)
+    break
+

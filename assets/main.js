@@ -1,10 +1,19 @@
-const localStorageKey = 'to-do-list-gn'
+const localStorageKey = 'to-do-list-gn';
 
 function validateIfExistsNewTask() {
     let values = JSON.parse(localStorage.getItem(localStorageKey) || "[]");
     let inputValue = document.getElementById('input-new-task').value;
     let exists = values.find(x => x.name == inputValue);
     return !exists ? false : true;
+}
+
+function addTask(taskName) {
+    let values = JSON.parse(localStorage.getItem(localStorageKey) || "[]");
+    values.push({
+        name: taskName
+    });
+    localStorage.setItem(localStorageKey, JSON.stringify(values));
+    showValues();
 }
 
 function newTask() {
@@ -14,20 +23,22 @@ function newTask() {
     if (!input.value) {
         input.style.border = '2px solid red';
         alert('Digite algo para inserir em sua lista');
-    }
-    else if (validateIfExistsNewTask()) {
+    } else if (validateIfExistsNewTask()) {
         alert('Já existe uma task com essa descrição');
+    } else {
+        addTask(input.value);
     }
-    else {
-        let values = JSON.parse(localStorage.getItem(localStorageKey) || "[]");
-        values.push({
-            name: input.value
-        })
-        localStorage.setItem(localStorageKey, JSON.stringify(values));
-        showValues();
-    }
+
     input.value = '';
 }
+
+function handleKeyPress(event) {
+    if (event.key === 'Enter') {
+        newTask();
+    }
+}
+
+document.getElementById('input-new-task').addEventListener('keypress', handleKeyPress);
 
 function showValues() {
     let values = JSON.parse(localStorage.getItem(localStorageKey) || "[]");
